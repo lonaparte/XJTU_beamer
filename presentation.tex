@@ -1,0 +1,163 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+% Special version modified and used by Li CHENG (https://lonaparte.github.io/logos-blog/)
+% Version 1.0 (19/05/18)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% \usetheme{metropolis}
+\usetheme{Copenhagen}
+\usecolortheme{beaver}
+\setbeamercolor{section number projected}{bg=darkred,fg=white}
+\setbeamercolor{subsection number projected}{bg=darkred}
+\setbeamercolor*{bibliography entry author}{fg=black}
+\setbeamercolor*{bibliography entry title}{parent=palette primary}
+\setbeamercolor*{bibliography entry location}{fg=black}
+% \setbeamertemplate{theorems}[numbered]
+\usefonttheme{professionalfonts}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{footline}[page number]
+\hypersetup{pdfpagemode=FullScreen}
+}
+\setbeamertemplate{navigation symbols}{}% 去掉下面没用的导航条
+
+\defbeamertemplate*{footline}{ccnu theme}{%
+    \leavevmode%
+    \hbox{%
+    % \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    %   \usebeamerfont{author in head/foot}\insertshortauthor
+    % \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.42\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortdate
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=0.08\paperwidth,ht=2.25ex,dp=1ex,right]{title in head/foot}%
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+    \end{beamercolorbox}}%
+    \vskip0pt%
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+% \usepackage{ctex} % Use Chinese.
+% \usepackage[orientation=landscape,size=custom,width=16,height=9,scale=0.5,debug]{beamerposter} % Set 5:3 size.
+\usepackage{enumitem,xcolor}
+\usepackage{wallpaper}
+\usepackage{textpos}
+
+
+\newcommand{\fig}[4]{
+    \begin{figure}[ht]
+    \centering
+    \includegraphics[width=#2\textwidth]{images/#1}
+    \caption{#3}
+    \label {fig: #4}
+    \end{figure}
+}
+
+\newcommand{\eq}[2]{
+    \begin{equation}
+    #1
+    \label {eq: #2}
+    \end{equation}
+}
+
+\newcommand{\figfig}[6]{
+    \begin{figure}[ht]
+    \begin{minipage}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{images/#1}
+    \caption{#2}
+    \label {fig: #3}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{images/#4}
+    \caption{#5}
+    \label {fig: #6}
+    \end{minipage}
+    \end{figure}
+
+\newcommand{。}{．} %将正文中的“。”号转换为“.”。
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\title[Short title in bottom]{Title}
+%  \\ using the data sheet parameters} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+% \author{Chunlin LV \and Yongxing ZHOU \and Shuyi QIN \and Zhenpeng HOU \and Li CHENG} % Your name
+\author{\footnotesize{Author I \\ Author II}}
+\institute[shorthand] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+Xi'an Jiaotong University \\ % Your institution for the title page
+\medskip
+\textit{author@example.com} % Your email address
+}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+% \titlepage % Print the title page as the first slide
+\maketitle
+\begin{textblock*}{2cm}(9cm,-2.7cm)
+    % \rule{4cm}{4cm}% use the \includegraphics command here
+    \includegraphics[width=4cm,height=4cm]{images/Picture1.jpg}
+\end{textblock*}
+\end{frame}
+
+\begin{frame}
+\frametitle{Outline} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{Section I}
+\subsection{Subsection I}
+\begin{frame}{Frame I}
+    
+\end{frame}
+% -----------------------------------------------
+\begin{frame}
+\frametitle{References}
+\footnotesize{
+\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
+\bibitem[1]{p1} Dušan Graovac, Marco Pürschel, Andreas Kiep (2006)
+\newblock MOSFET Power Losses Calculation Using the DataSheet Parameters
+\end{thebibliography}
+\begin{thebibliography}{99}
+\bibitem[2]{p2} TOSHIBA: Data sheet of 2SK3569 (2004)
+\newblock https://pdf1.alldatasheet.com/datasheet-pdf/view/122207/TOSHIBA/2SK3569.html
+\end{thebibliography}
+\begin{thebibliography}{99}
+\bibitem[3]{p3} Fairchild: Data sheet of FCP11N60 (2008)
+\newblock http://www.onsemi.com/PowerSolutions/product.do?id=FCP11N60
+\end{thebibliography}
+}
+\end{frame}
+
+\end{document} 
