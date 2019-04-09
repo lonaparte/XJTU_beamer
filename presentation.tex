@@ -64,6 +64,17 @@
 \usepackage{wallpaper}
 \usepackage{textpos}
 
+% Bibliography Settings
+\usepackage[backend=bibtex,sorting=none]{biblatex}
+\addbibresource{bib.bib} %BibTeX数据文件及位置
+\setbeamerfont{footnote}{size=\tiny}
+\setbeamertemplate{bibliography item}[text]
+
+% \begin{itemize}[label=\textcolor{darkred}{\textbullet}]
+%     \item Average Model
+%     \item Generalized Average Model
+% \end{itemize}
+
 
 \newcommand{\fig}[4]{
     \begin{figure}[ht]
