@@ -140,7 +140,12 @@ Xi'an Jiaotong University \\ % Your institution for the title page
 
 \begin{frame}
 \frametitle{Outline} % Table of contents slide, comment this block out to remove it
-\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\tableofcontents[ 
+    currentsubsection, 
+    hideothersubsections, 
+    % sectionstyle=show/hide, 
+    % subsectionstyle=show/shaded, 
+    ] % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
 \end{frame}
 
 %----------------------------------------------------------------------------------------
@@ -149,6 +154,14 @@ Xi'an Jiaotong University \\ % Your institution for the title page
 
 %------------------------------------------------
 \section{Section I}
+\begin{frame}{目录}
+    \tableofcontents[ 
+        currentsection, 
+        hideothersubsections, 
+        % sectionstyle=show/hide, 
+        % subsectionstyle=show/shaded, 
+        ]
+\end{frame}
 \subsection{Subsection I}
 \begin{frame}{Frame I}
     
