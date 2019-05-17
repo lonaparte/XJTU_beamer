@@ -48,7 +48,7 @@
     \usebeamerfont{title in head/foot}\insertshorttitle
     \end{beamercolorbox}%
     \begin{beamercolorbox}[wd=.42\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
-    \usebeamerfont{author in head/foot}\insertshortdate
+    \usebeamerfont{author in head/foot}{\insertshortauthor, \insertshortdate}
     \end{beamercolorbox}%
     \begin{beamercolorbox}[wd=0.08\paperwidth,ht=2.25ex,dp=1ex,right]{title in head/foot}%
     \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
@@ -120,7 +120,7 @@
 %  \\ using the data sheet parameters} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 % \author{Chunlin LV \and Yongxing ZHOU \and Shuyi QIN \and Zhenpeng HOU \and Li CHENG} % Your name
-\author{\footnotesize{Author I \\ Author II}}
+\author[Author in bottom]{\footnotesize{Author I \\ Author II}}
 \institute[shorthand] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
 {
 Xi'an Jiaotong University \\ % Your institution for the title page
