@@ -129,6 +129,38 @@
 \newcommand{。}{．} %将正文中的“。”号转换为“.”。
 }
 
+% % add text to beamer footline
+% \makeatletter
+% % add a macro that saves its argument
+% \newcommand{\footlineextra}[1]{\gdef\insertfootlineextra{#1}}
+% \newbox\footlineextrabox
+%  % add a beamer template that sets the saved argument in a box.
+% % The * means that the beamer font and color "footline extra" are automatically added. 
+% \defbeamertemplate*{footline extra}{default}{
+%   \begin{beamercolorbox}[ht=2.25ex,dp=1ex,leftskip=\Gm@lmargin]{footline extra}
+%     \insertfootlineextra
+%     % \par\vspace{2.5pt}
+%   \end{beamercolorbox}
+% }
+%  \addtobeamertemplate{footline}{%
+%   % set the box with the extra footline material but make it add no vertical space
+%   \setbox\footlineextrabox=\vbox{\usebeamertemplate*{footline extra}}
+%   \vskip -\ht\footlineextrabox
+%   \vskip -\dp\footlineextrabox
+%   \box\footlineextrabox%
+% }
+% {}
+%  % patch \begin{frame} to reset the footline extra material
+% \let\beamer@original@frame=\frame
+% \def\frame{\gdef\insertfootlineextra{}\beamer@original@frame}
+% \footlineextra{}
+% \makeatother
+
+% Cancel the footfullcite number
+% \makeatletter
+% \renewcommand{\@makefnmark}{\hbox{\@textsuperscript{\usebeamercolor[fg]{footnote mark}\usebeamerfont*{footnote mark}{*}}}}
+% \makeatother
+
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
