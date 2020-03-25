@@ -72,6 +72,28 @@
 \setbeamerfont{footnote}{size=\tiny}
 \setbeamertemplate{bibliography item}[text]
 
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{numbers=left, 
+	basicstyle=\tiny\sffamily,
+	numbers=left,
+ 	numberstyle=\tiny,
+	frame=none,
+	tabsize=4,
+	columns=fixed,
+	showstringspaces=false,
+	showtabs=false,
+	keepspaces,
+	commentstyle=\color{red},
+	keywordstyle=\color{blue},
+    breaklines=true,
+    backgroundcolor=\color{lightgray!40!white},
+    basicstyle=\ttfamily,
+    commentstyle=\ttfamily\color{green!40!black},
+    morekeywords={myLCL_num, syms, myDamper_num},
+    moredelim=*[s][\ttfamily]{:}{:}
+} 
+
 \usepackage{wasysym} % 笑脸符号
 % \smiley
 % \frownie
